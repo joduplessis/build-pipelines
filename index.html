@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="pluginify.js"></script>
+    <script type="text/javascript" src="objectWrangling.js"></script>
+    <!-- Styles & scripts specifically for our jquery test -->
+    <style>
+        .jquery {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 5px;
+            background-color: #ddd;
+            display: inline-block;
+            color: #666666;
+            min-width: 70px;
+            height: auto;
+            text-align: center;
+        }
+
+            .jquery.winner {
+                background-color: red;
+                color: white;
+            }
+    </style>
+    <script type="text/javascript">
+        'use strict';
+        $(document).ready(function() {
+            // Pluginify one of our DOM elements
+            $('#jquery').pluginify({
+                'maximum': 500,
+                'start': -55,
+                'random': Math.random()
+            });
+        });
+    </script>
+  </head>
+  <body>
+    <!-- Testing a jquery plugin -->
+    <span class="jquery" id="jquery"></span>
+
+    <!-- App -->
+    <div ng-app="app" hide><div ng-view></div></div>
+
+    <!-- Our script -->
+    <script type="text/javascript" src="dist/bundle.min.js"></script>
+  </body>
+</html>

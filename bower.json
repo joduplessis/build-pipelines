@@ -1,0 +1,22 @@
+{
+  "name": "ToDoList",
+  "description": "To do list example",
+  "main": "",
+  "authors": [
+    "Jo du Plessis"
+  ],
+  "license": "FALSE",
+  "moduleType": [],
+  "homepage": "",
+  "location": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

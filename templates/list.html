@@ -1,0 +1,16 @@
+<!-- Header directive using a $compile -->
+<div header="heading paragraph"></div>
+
+<!-- To do list controller -->
+<div ng-controller="TodoList" class="container todo-list">
+  <h1>{{ title }} ({{ getTotalTodos() }})</h1>
+  <ul>
+    <li ng-repeat="item in items">
+      <input type="checkbox" ng-model="item.done" ng-change=""/>
+      <a href="#/detail/{{item.text}}/{{item.done}}" class="todo-item {{item.done}}">{{ item.text }}</a>
+    </li>
+  </ul>
+  <input type="text" ng-model="inputTodoText" ng-model-instant/>
+  <input type="button" ng-click="addTodoText()" value=" Add " />
+  <span class="dim">{{ inputTodoText }}</span>
+</div>
